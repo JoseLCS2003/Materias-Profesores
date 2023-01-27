@@ -45,10 +45,15 @@ Route::get('/materias/editar/{id}',[materiaController::class,'editar'])->name('m
 Route::put('/materias/editar/{id}',[materiaController::class,'update'])->name('materias.guardar');
 Route::delete('/materias/eliminar/{id}',[materiaController::class,'eliminar'])->name('materias.eliminar');
 Route::get('/materias/profesor/{id}',[materiaController::class,'materiaProfesor'])->name('materia.Profesores');
+Route::get('/materia/profesor/nuevo/{id}',[materiaController::class,'materiaProfesorNuevo'])->name('materias.profesor.nuevo');
 
 
 //Profesores
-Route::get('/profesores',[profesorController::class,'index']);
+Route::get('/profesores',[profesorController::class,'index'])->name('profesores.index');
 Route::get('/profesores/nuevo',[profesorController::class,'nuevo']);
+Route::post('/profesores/nueva',[profesorController::class,'guardar']);
+Route::get('/profesores/editar/{id}',[profesorController::class,'editar'])->name('profesores.editar');
+Route::put('/profesores/editar/{id}',[profesorController::class,'update'])->name('profesores.guardar');
+Route::delete('/profesores/eliminar/{id}',[profesorController::class,'eliminar'])->name('profesores.eliminar');
 
 require __DIR__.'/auth.php';

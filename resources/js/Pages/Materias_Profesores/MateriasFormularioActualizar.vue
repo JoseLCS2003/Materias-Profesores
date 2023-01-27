@@ -5,30 +5,28 @@
     <section>
         <div class="relative items-center w-full px-7 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
             <div class="grid grid-cols-1">
-                <div class="w-full max-w-lg mx-auto my-4 bg-white shadow-xl rounded-xl">
+                <div class="w-full max-w-xg mx-auto my-4 bg-white shadow-xl rounded-xl">
                     <div class="p-6 lg:text-center">
-                        <h1 class="text-3xl">Editar Materia</h1>
+                        <h1 class="text-4xl">Editar Materia</h1>
                         <form @submit.prevent="actualizarMateria" class="container mx-auto mt-7" method="post">
 
                             <label
-                                class=" mx-2 relative block overflow-hidden rounded-md border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
-                                <input type="text" name="nombre" placeholder="Ingresar el nombre"
-                                    class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-                                    v-model="form.nombre" />
-
+                                class="mt-4 mb-4 mx-2 relative block overflow-hidden rounded-xl border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
+                                <input v-model="form.nombre" type="text" name="nombre" placeholder="Ingresar el nombre"
+                                    class="peer h-12 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-xl"
+                                     />
                                 <span
-                                    class="absolute left-3 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">
+                                    class="absolute left-3 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-xl peer-focus:top-2 peer-focus:text-xs">
                                     Ingresar el nombre
                                 </span>
                             </label>
                             <label
-                                class="mt-7 mb-7 mx-2 relative block overflow-hidden rounded-md border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
-                                <input type="text" name="unidades" placeholder="Ingresar el nombre"
-                                    class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-                                    v-model="form.unidades" />
-
+                                class="mt-4 mb-4 mx-2 relative block overflow-hidden rounded-xl border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
+                                <input v-model="form.unidades" type="text" name="unidades" placeholder="Ingresar el nombre"
+                                    class="peer h-12 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-xl"
+                                     />
                                 <span
-                                    class="absolute left-3 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">
+                                    class="absolute left-3 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-xl peer-focus:top-2 peer-focus:text-xs">
                                     Ingresar las unidades
                                 </span>
                             </label>

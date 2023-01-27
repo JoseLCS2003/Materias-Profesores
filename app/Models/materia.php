@@ -10,5 +10,8 @@ class materia extends Model
     use HasFactory;
     protected $table = 'materias';
     protected $fillable = ['nombre','unidades'];
+    public function Profesores(){
+        return $this->hasMany(profesor::class);
+    }
 
 }

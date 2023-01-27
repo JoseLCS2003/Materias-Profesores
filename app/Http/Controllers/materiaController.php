@@ -54,7 +54,13 @@ class materiaController extends Controller
         $profesores=DB::table('profesores')
                         ->join('materias','profesores.materia','=','materias.id')
                         ->select('profesores.id as id','profesores.nombre as nombre','profesores.apPaterno','profesores.apMaterno','profesores.correo','profesores.telefono','materias.nombre as materias')
-                        ->where('materias.id','=',$materia->id)
+                        ->where('materias.id','=',$request->id)
                         ->get();
+        return Inertia::render('Materias_Profesores/ProfesoresTabla',['materiaProfesor'=>$profesores,'materia'=>$materia]);
+    }
+    public function materiaProfesorNuevo(Request $request)
+    {
+        $materia=materia::find($request->id);
+        return Inertia::render('Materias_Profesores/ProfesoresFormularioGuardar',['materiaP'=>$materia]);
     }   
 }
